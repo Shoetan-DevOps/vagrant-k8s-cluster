@@ -1,0 +1,27 @@
+---
+# cluster_name to group VMs in VirtualBox:
+cluster_name: Single Node Sandbox
+
+core_networking:
+  network_address: 10.7.0.0
+  master_host_octect: 10
+  dns:
+    - 1.1.1.1 #cloudfare DNS
+  #
+  #
+
+nodes:
+  master:
+    cpu: 2
+    memory: 4096
+  workers:
+    count: 1
+    cpu: 2
+    memory: 4096
+
+environment:
+  vagrant_box: bento/ubuntu-22.04
+  calico: 3.26.0
+  # dashboard: 2.7.0
+  # kubernetes: 1.27.1-00
+  # os: xUbuntu_22.04
